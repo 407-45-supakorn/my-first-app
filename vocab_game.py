@@ -89,11 +89,14 @@ ans3 = st.text_input(
     "ข้อ 3: The sun is very `b _ i g h t` today. ☀️",
     value=st.session_state.ans3_val,
 )
+
 ans4 = st.text_input(
     "ข้อ 4: I like to drink `m _ l k`. 🥛",
     value=st.session_state.ans4_val,
 )
-
+# อัปเดตค่าล่าสุดเข้าตัวแปร
+st.session_state.ans3_val = ans3
+st.session_state.ans4_val = ans4
 
 # 4. ปุ่มส่งคำตอบ
 if "start" in st.session_state and not st.session_state.get("is_ended", False):
